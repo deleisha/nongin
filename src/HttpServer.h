@@ -3,10 +3,8 @@
 
 #include <iostream>
 #include "libuv/include/uv.h"
-namespace nongin
-{
-namespace Http
-{
+namespace nongin {
+namespace Http {
 
 
 class Server

@@ -7,7 +7,10 @@ namespace nongin {
 namespace Http {
 
 Server::Server(std::string addr, int p)
-    :loop_(uv_default_loop()), socket_(new uv_tcp_t),listenAddr_(addr), port(p)
+    :loop_(uv_default_loop())
+    , socket_(new uv_tcp_t)
+    , listenAddr_(addr)
+    , port(p)
 {
     uv_tcp_init(loop_, socket_);
     socket_->data = this;
