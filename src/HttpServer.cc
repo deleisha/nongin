@@ -22,6 +22,7 @@ Server::Server(std::string addr, int p)
     r = uv_tcp_bind(socket_, (struct sockaddr*)&bind_addr, 0);
     if( r ) {
 	fprintf( stderr, "bind: %s\n", uv_strerror(r));
+	delete socket_;
 	abort();
     }
 }
